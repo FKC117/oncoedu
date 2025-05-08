@@ -743,6 +743,7 @@ class PatientObservationAdmin(ImportExportModelAdmin):
     list_filter = ('created_at', 'updated_at')
     list_per_page = 10
     list_display_links = ('id', 'patient_id', 'doctor_id')
+    autocomplete_fields = ('patient_id', 'doctor_id')
 
 
 #----------------------------------- Patient Ovservation ENDS Here -----------------------------------#
