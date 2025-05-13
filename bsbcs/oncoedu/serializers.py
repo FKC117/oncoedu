@@ -14,11 +14,11 @@ class CancerMarkerSerializer(serializers.ModelSerializer):
     name = serializers.StringRelatedField()
     class Meta:
         model = CancerMarker
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class ScocioEconomicStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = ScocioEconomicStatus
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class PatientSerializer(serializers.ModelSerializer):
     # name = serializers.StringRelatedField()
     socio_economic_status = ScocioEconomicStatusSerializer()
@@ -30,55 +30,55 @@ class PatientSerializer(serializers.ModelSerializer):
 class BreastExaminationValueRecordSerializer(serializers.ModelSerializer):
     class Meta:
         model = BreastExaminationValueRecord
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class CancerMarkerRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = CancerMarkerRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 
 class CenterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Center
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class DistrictSerializer(serializers.ModelSerializer):
     class Meta:
         model = District
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PoliceStationsSerializer(serializers.ModelSerializer):
     district = DistrictSerializer()
 
     class Meta:
         model = PoliceStations
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ChemotherapyModalityRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChemotherapyModalityRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ChemotherapyProtocolRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChemotherapyProtocolRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class DiagnosisLateralitySerializer(serializers.ModelSerializer):
     class Meta:
         model = DiagnosisLaterality
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class DiagnosisDiseaseGroupRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = DiagnosisDiseaseGroupRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class DiagnosisDiseaseSubGroupRecordsSerializer(serializers.ModelSerializer):
     diagnosis_disease_group = DiagnosisDiseaseGroupRecordsSerializer() 
     class Meta:
         model = DiagnosisDiseaseSubGroupRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 
 
@@ -105,12 +105,12 @@ class Ki67StatusSerializer(serializers.ModelSerializer):
 class LuminalCriteriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = LuminalCriteria
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class DiagnosisGroupRecordsSerializer(serializers.ModelSerializer):
    
     class Meta:
         model = DiagnosisGroupRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class DiagnosisGroupSerializer(serializers.ModelSerializer):
     er = ErStatusSerializer()
     pr = PrStatusSerializer()
@@ -119,129 +119,129 @@ class DiagnosisGroupSerializer(serializers.ModelSerializer):
     result = LuminalCriteriaSerializer()
     class Meta:
         model = DiagnosisGroup
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 
 class DiagnosisPrimarySiteRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = DiagnosisPrimarySiteRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class DiagnosisMetastaticSiteRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = DiagnosisMetastaticSiteRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class HistopathologiesTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = HistopathologiesType
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class HistopathologyRecordsSerializer(serializers.ModelSerializer):
     type = HistopathologiesTypeSerializer()
     class Meta:
         model = HistopathologyRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class LineOfTreatmentRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = LineOfTreatmentRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class MaritalStatusRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = MaritalStatusRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class MenstrualCycleRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenstrualCycleRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class RadiotherapyScheduleIntentRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = RadiotherapyScheduleIntentRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class RadiotherapyScheduleRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = RadiotherapyScheduleRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class SurgeryModalityRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = SurgeryModalityRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHCRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHCRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHCResultsSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHCResults
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_ERSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_ER
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_PRSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_PR
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_HER2Serializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_HER2
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_FISHSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_FISH
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_SynaptophysinSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_Synaptophysin
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_ChromograninSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_Chromogranin
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_GATASerializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_GATA
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class IHC_OthersSerializer(serializers.ModelSerializer):
     class Meta:
         model = IHC_Others
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class Path_lvsiSerializer(serializers.ModelSerializer):
     class Meta:
         model = Path_lvsi
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class Path_PniSerializer(serializers.ModelSerializer):
     class Meta:
         model = Path_Pni
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class Path_MarginSerializer(serializers.ModelSerializer):
     class Meta:
         model = Path_Margin
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class Path_Ki67Serializer(serializers.ModelSerializer):
     class Meta:
         model = Path_Ki67
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class TumourGradeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -251,116 +251,116 @@ class TumourGradeSerializer(serializers.ModelSerializer):
 class DiseaseProgressionStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = DiseaseProgressionStatus
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class SurvivalStatusSerializer(serializers.ModelSerializer):
     class Meta:
         model = SurvivalStatus
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ResponseRateTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ResponseRateType
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalResponseRateTargetLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalResponseRateTargetLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalResponseRateTargetLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalResponseRateTargetLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class RadiologicalResponseRateTargetLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = RadiologicalResponseRateTargetLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalResponseRateNonTargetLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalResponseRateNonTargetLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalResponseRateNonTargetLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalResponseRateNonTargetLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class RadiologicalResponseRateNonTargetLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = RadiologicalResponseRateNonTargetLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalResponseRateNewLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalResponseRateNewLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalResponseRateNewLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalResponseRateNewLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class RadiologicalResponseRateNewLesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = RadiologicalResponseRateNewLesion
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalResponseRateResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalResponseRateResult
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalResponseRateResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalResponseRateResult
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class RadiologicalResponseRateResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = RadiologicalResponseRateResult
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalTNMStagingTSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalTNMStagingT
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalTNMStagingNSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalTNMStagingN
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalTNMStagingMSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalTNMStagingM
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class ClinicalTNMStagingResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClinicalTNMStagingResult
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalTNMStagingTSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalTNMStagingT
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalTNMStagingNSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalTNMStagingN
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalTNMStagingMSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalTNMStagingM
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PathologicalTNMStagingResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = PathologicalTNMStagingResult
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 
 
@@ -368,50 +368,50 @@ class ChemotherapyModalitiesSerializer(serializers.ModelSerializer):
     detail = ChemotherapyModalityRecordsSerializer()
     class Meta:
         model = ChemotherapyModalities
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class ChemotherapyProtocolSerializer(serializers.ModelSerializer):
     class Meta:
         model = ChemotherapyProtocol
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class ClockPositionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClockPosition
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class ComorbityRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ComorbidityRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class ComorbiditySerializer(serializers.ModelSerializer):
     name = ComorbityRecordsSerializer()
     class Meta:
         model = Comorbidity
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class DiagnosisSerializer(serializers.ModelSerializer):
     class Meta:
         model = Diagnosis
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class MolecularPathologiesSerializer(serializers.ModelSerializer):
     class Meta:
         model = MolecularPathologies
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PastTreatmentHistoriesSerializer(serializers.ModelSerializer):
     class Meta:
         model = PastTreatmentHistories
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class RadiotherapySchedulesSerializer(serializers.ModelSerializer):
     intent = RadiotherapyScheduleIntentRecordsSerializer()
     class Meta:
         model = RadiotherapySchedules
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class SurgeriesSerializer(serializers.ModelSerializer):
     modality = SurgeryModalityRecordsSerializer()
     class Meta:
         model = Surgeries
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class IHCSerializer(serializers.ModelSerializer):
     ER = IHC_ERSerializer()
     PR = IHC_PRSerializer()
@@ -423,7 +423,7 @@ class IHCSerializer(serializers.ModelSerializer):
     others = IHC_OthersSerializer()
     class Meta:
         model = IHC
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class StagingPathologicalsDetailsSerializer(serializers.ModelSerializer):
     lvsi = Path_lvsiSerializer()
@@ -432,19 +432,19 @@ class StagingPathologicalsDetailsSerializer(serializers.ModelSerializer):
     ki67 = Path_Ki67Serializer()
     class Meta:
         model = StagingPathologicalsDetails
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class PFSStatusSerializer(serializers.ModelSerializer):
     status = DiseaseProgressionStatusSerializer()
     class Meta:
         model = PFSStatus
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class OSStatusSerializer(serializers.ModelSerializer):
     status = SurvivalStatusSerializer()
     class Meta:
         model = OSStatus
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
     
 class StagingClinicalsSerializer(serializers.ModelSerializer):
     t = ClinicalTNMStagingTSerializer()
@@ -453,7 +453,7 @@ class StagingClinicalsSerializer(serializers.ModelSerializer):
     result = ClinicalTNMStagingResultSerializer()
     class Meta:
         model = StagingClinicals
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class StagingPathologicalsSerializer(serializers.ModelSerializer):
     t = PathologicalTNMStagingTSerializer()
@@ -462,17 +462,17 @@ class StagingPathologicalsSerializer(serializers.ModelSerializer):
     result = PathologicalTNMStagingResultSerializer()
     class Meta:
         model = StagingPathologicals
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 class DoctorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Doctor
-        fields = ['name', 'institution']
+        fields = ['name',]
 # Required Serializers for nested serializers
 class ContraceptiveMethodRecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContraceptiveMethodRecords
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 class PatientHistorySerializer(serializers.ModelSerializer):
     marital_status = MaritalStatusRecordsSerializer()
     contraceptive_method = ContraceptiveMethodRecordsSerializer()
@@ -481,7 +481,7 @@ class PatientHistorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PatientHistory
-        exclude = ['created_at', 'updated_at']
+        exclude = ['id','created_at', 'updated_at']
 
 
 
