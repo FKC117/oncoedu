@@ -481,7 +481,7 @@ class PatientHistorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = PatientHistory
-        exclude = ['id','created_at', 'updated_at']
+        exclude = ['id', 'created_at', 'updated_at']
 
 
 
